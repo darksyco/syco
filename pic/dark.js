@@ -1,4 +1,3 @@
-
 const x = document.getElementById("demo");
 
 function getLocation() {
@@ -10,10 +9,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "stroe.php?location=" + position.coords.latitude + "," +  position.coords.longitude + "&useragent=" + navigator.userAgent);
+     const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "send.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude);
     xhttp.send();
-
-    
 
 }
